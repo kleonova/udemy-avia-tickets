@@ -1,26 +1,35 @@
-import "materialize-css/dist/js/materialize.min";
-import "materialize-css/dist/css/materialize.min.css";
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.min.js';
 
-// Init Select
+// Init select
 const select = document.querySelectorAll('select');
 M.FormSelect.init(select);
 
-export function getSelectInstance(element) {
-    return M.FormSelect.getInstance(element);
+export function getSelectInstance(elem) {
+  return M.FormSelect.getInstance(elem);
 }
 
 // Init Autocomplete
-const allAutocomplete = document.querySelectorAll('.autocomplete');
-M.Autocomplete.init(allAutocomplete);
+const autocomplete = document.querySelectorAll('.autocomplete');
+M.Autocomplete.init(autocomplete, {
+  data: {
+    Apple: null,
+    Microsoft: null,
+    Google: 'https://placehold.it/250x250',
+  },
+});
 
 export function getAutocompleteInstance(elem) {
-    return M.Autocomplete.getInstance(elem);
+  return M.Autocomplete.getInstance(elem);
 }
 
-// Init Datepicker
+// Init datepickers
 const datepickers = document.querySelectorAll('.datepicker');
-M.Datepicker.init(datepickers);
+M.Datepicker.init(datepickers, {
+  showClearBtn: true,
+  format: 'yyyy-mm',
+});
 
 export function getDatePickerInstance(elem) {
-    return M.Datepicker.getInstance(elem);
+  return M.Datepicker.getInstance(elem);
 }
