@@ -6,6 +6,80 @@
     <title>Udemy Avia Tickets</title>
 </head>
 <body>
-    <h1>Udemy Avia Tickets</h1>
+    <nav class="header purple darken-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="brand-logo">Avia Tickets</a>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <div class="input-field currency-select">
+                        <select>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-section">
+            <form class="card">
+                <div class="card-content d-flex flex-column">
+                    <span class="card-title">Search Tickets</span>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            id="autocomplete-origin"
+                            class="autocomplete"
+                        />
+                        <label for="autocomplete-origin">Origin</label>
+                    </div>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            id="autocomplete-destination"
+                            class="autocomplete"
+                        />
+                        <label for="autocomplete-destination">Destination</label>
+                    </div>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            class="datepicker"
+                            id="datepicker-depart"
+                        />
+                        <label for="datepicker-depart">Depart date </label>
+                    </div>
+                    <div class="input-field">
+                        <input
+                            type="text"
+                            class="datepicker"
+                            id="datepicker-return"
+                        />
+                        <label for="datepicker-return">Return date </label>
+                    </div>
+                </div>
+                <div class="card-action d-flex">
+                    <button
+                        class="btn waves-effect waves-light purple darken-3"
+                        type="submit"
+                        name="action"
+                    >
+                        Search
+                    </button>
+
+                    <button
+                        class="btn waves-effect waves-light pink darken-3 ml-auto"
+                        type="reset"
+                        name="action"
+                    >
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

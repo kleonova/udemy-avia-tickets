@@ -1,5 +1,6 @@
-import '../css/style.css';
 import locations from "./store/locations";
+import "./plugins";
+import "../css/style.css";
 
 locations.init().then(res => {
     console.log(res);
