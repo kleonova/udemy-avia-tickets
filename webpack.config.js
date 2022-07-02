@@ -42,16 +42,26 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-
             options: {
               importLoaders: 1,
               sourceMap: true,
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
-              plugins: () => [precss, autoprefixer],
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    precss,
+                    autoprefixer,
+                    {
+                      // Options
+                    },
+                  ],
+                ],
+              },
             },
           },
         ],
